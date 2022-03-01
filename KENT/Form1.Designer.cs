@@ -51,7 +51,7 @@ namespace KENT
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(1057, 40);
+            this.button1.Location = new System.Drawing.Point(1057, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 23);
             this.button1.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace KENT
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(1057, 99);
+            this.button2.Location = new System.Drawing.Point(1057, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 23);
             this.button2.TabIndex = 1;
@@ -143,9 +143,9 @@ namespace KENT
             // 
             this.button3.Location = new System.Drawing.Point(983, 27);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 34);
+            this.button3.Size = new System.Drawing.Size(54, 23);
             this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
+            this.button3.Text = "Поиск";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -160,6 +160,7 @@ namespace KENT
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinimumSize = new System.Drawing.Size(1280, 800);
             this.Name = "Form1";
             this.Text = "KENT";
