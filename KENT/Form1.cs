@@ -24,7 +24,6 @@ namespace KENT
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Sort(this.dataGridView1.Columns[1], ListSortDirection.Descending);
-            // DataGridView1.Columns[2].SortMode = DataGridViewColumnSortMode.Automatic
             //Form2 form2 = new Form2();
             //form2.Show();
         }
@@ -33,7 +32,7 @@ namespace KENT
         {
             
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bdkDataSet.Таблица1". При необходимости она может быть перемещена или удалена.
-            this.таблица1TableAdapter.Fill(this.bdkDataSet.Таблица1);
+            //this.таблица1TableAdapter.Fill(this.bdkDataSet.Таблица1);
 
         }
 
@@ -44,7 +43,8 @@ namespace KENT
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Form2 form2 = new Form2();
+            form2.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
