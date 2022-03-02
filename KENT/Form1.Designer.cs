@@ -42,16 +42,22 @@ namespace KENT
             this.bdkDataSet = new KENT.bdkDataSet();
             this.таблица1TableAdapter = new KENT.bdkDataSetTableAdapters.Таблица1TableAdapter();
             this.button3 = new System.Windows.Forms.Button();
+            this.bdkDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bdkDataSet1 = new KENT.bdkDataSet();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdkDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdkDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdkDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(1057, 25);
+            this.button1.Location = new System.Drawing.Point(1196, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 23);
             this.button1.TabIndex = 0;
@@ -62,12 +68,13 @@ namespace KENT
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(1057, 84);
+            this.button2.Location = new System.Drawing.Point(1196, 84);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(195, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "Сортировка от я до а";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // richTextBox1
             // 
@@ -75,7 +82,7 @@ namespace KENT
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBox1.Location = new System.Drawing.Point(12, 27);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(968, 23);
+            this.richTextBox1.Size = new System.Drawing.Size(1107, 23);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
@@ -85,7 +92,7 @@ namespace KENT
             this.справкаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1264, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1403, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,10 +105,8 @@ namespace KENT
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.кодDataGridViewTextBoxColumn,
@@ -109,8 +114,9 @@ namespace KENT
             this.dataGridView1.DataSource = this.таблица1BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 84);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1025, 627);
+            this.dataGridView1.Size = new System.Drawing.Size(1145, 627);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // кодDataGridViewTextBoxColumn
             // 
@@ -122,8 +128,9 @@ namespace KENT
             // 
             this.темаDataGridViewTextBoxColumn.DataPropertyName = "Тема";
             this.темаDataGridViewTextBoxColumn.HeaderText = "Тема";
+            this.темаDataGridViewTextBoxColumn.MinimumWidth = 1000;
             this.темаDataGridViewTextBoxColumn.Name = "темаDataGridViewTextBoxColumn";
-            this.темаDataGridViewTextBoxColumn.ReadOnly = true;
+            this.темаDataGridViewTextBoxColumn.Width = 1000;
             // 
             // таблица1BindingSource
             // 
@@ -141,7 +148,8 @@ namespace KENT
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(983, 27);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(1124, 25);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(54, 23);
             this.button3.TabIndex = 5;
@@ -149,11 +157,21 @@ namespace KENT
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // bdkDataSetBindingSource
+            // 
+            this.bdkDataSetBindingSource.DataSource = this.bdkDataSet;
+            this.bdkDataSetBindingSource.Position = 0;
+            // 
+            // bdkDataSet1
+            // 
+            this.bdkDataSet1.DataSetName = "bdkDataSet";
+            this.bdkDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 761);
+            this.ClientSize = new System.Drawing.Size(1403, 761);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.richTextBox1);
@@ -161,7 +179,7 @@ namespace KENT
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimumSize = new System.Drawing.Size(1280, 800);
+            this.MinimumSize = new System.Drawing.Size(1419, 800);
             this.Name = "Form1";
             this.Text = "KENT";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -170,6 +188,9 @@ namespace KENT
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdkDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdkDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdkDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,9 +207,12 @@ namespace KENT
         private bdkDataSet bdkDataSet;
         private System.Windows.Forms.BindingSource таблица1BindingSource;
         private bdkDataSetTableAdapters.Таблица1TableAdapter таблица1TableAdapter;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.BindingSource bdkDataSetBindingSource;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private bdkDataSet bdkDataSet1;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn темаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button3;
     }
 }
 
