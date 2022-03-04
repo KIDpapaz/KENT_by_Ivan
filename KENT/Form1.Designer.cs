@@ -105,6 +105,8 @@ namespace KENT
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -114,6 +116,7 @@ namespace KENT
             this.dataGridView1.DataSource = this.таблица1BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 84);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(1145, 627);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -123,6 +126,7 @@ namespace KENT
             this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
             this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
             this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // темаDataGridViewTextBoxColumn
             // 
@@ -130,6 +134,7 @@ namespace KENT
             this.темаDataGridViewTextBoxColumn.HeaderText = "Тема";
             this.темаDataGridViewTextBoxColumn.MinimumWidth = 1000;
             this.темаDataGridViewTextBoxColumn.Name = "темаDataGridViewTextBoxColumn";
+            this.темаDataGridViewTextBoxColumn.ReadOnly = true;
             this.темаDataGridViewTextBoxColumn.Width = 1000;
             // 
             // таблица1BindingSource

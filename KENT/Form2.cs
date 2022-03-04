@@ -29,10 +29,5 @@ namespace KENT
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            webBrowser1.DocumentText = "<html><body>Тут типо матрицы  <p>hi bro<p></body></html>";
-        }
     }
 }
