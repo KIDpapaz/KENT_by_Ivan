@@ -36,8 +36,6 @@ namespace KENT
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.темаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.таблица1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bdkDataSet = new KENT.bdkDataSet();
             this.таблица1TableAdapter = new KENT.bdkDataSetTableAdapters.Таблица1TableAdapter();
@@ -45,6 +43,8 @@ namespace KENT
             this.bdkDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bdkDataSet1 = new KENT.bdkDataSet();
+            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.темаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.таблица1BindingSource)).BeginInit();
@@ -121,22 +121,6 @@ namespace KENT
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // темаDataGridViewTextBoxColumn
-            // 
-            this.темаDataGridViewTextBoxColumn.DataPropertyName = "Тема";
-            this.темаDataGridViewTextBoxColumn.HeaderText = "Тема";
-            this.темаDataGridViewTextBoxColumn.MinimumWidth = 1000;
-            this.темаDataGridViewTextBoxColumn.Name = "темаDataGridViewTextBoxColumn";
-            this.темаDataGridViewTextBoxColumn.ReadOnly = true;
-            this.темаDataGridViewTextBoxColumn.Width = 1000;
-            // 
             // таблица1BindingSource
             // 
             this.таблица1BindingSource.DataMember = "Таблица1";
@@ -171,6 +155,20 @@ namespace KENT
             // 
             this.bdkDataSet1.DataSetName = "bdkDataSet";
             this.bdkDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // кодDataGridViewTextBoxColumn
+            // 
+            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.кодDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // темаDataGridViewTextBoxColumn
+            // 
+            this.темаDataGridViewTextBoxColumn.DataPropertyName = "Тема";
+            this.темаDataGridViewTextBoxColumn.HeaderText = "Тема";
+            this.темаDataGridViewTextBoxColumn.Name = "темаDataGridViewTextBoxColumn";
+            this.темаDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
